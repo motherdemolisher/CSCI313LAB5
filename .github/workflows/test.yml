@@ -17,11 +17,11 @@ jobs:
 
             - name: run test cases in job test
               run: python -m  unittest  test.py
-deploy:
-  needs: testing
-  runs-on: ubuntu-latest
-  steps:
-    - name: check
-      uses: action/checkout@v4
-    - name: deploy done
-      uses: echo "deploy done"
+    deploy:
+      needs: testing
+      runs-on: ubuntu-latest
+      steps:
+        - name: check
+          uses: action/checkout@v4
+        - name: deploy done
+          uses: echo "deploy done"
